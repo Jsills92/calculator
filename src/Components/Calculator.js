@@ -4,13 +4,21 @@ import Display from './Display';
 
 const Calculator = () => {
   const [displayValue, setDisplayValue] = useState('0');
-  
+
   const handleButtonClick = (label) => {
     if (label === '=') {
       // We'll handle equals logic later
       return;
     }
     setDisplayValue((prevValue) => (prevValue === '0' ? label : prevValue + label));
+  };
+
+  const handleClearClick = () => {
+    setDisplayValue('0'); // Reset the display to '0'
+  };
+
+  const handleGithubClick = () => {
+    window.open('https://github.com/jsills92', '_blank'); // Open GitHub in a new tab
   };
 
   return (
@@ -29,6 +37,8 @@ const Calculator = () => {
         {['0', '.', '=', '+'].map((label) => (
           <Button key={label} label={label} onClick={handleButtonClick} />
         ))}
+        <Button label="Clear" onClick={handleClearClick} />
+        <Button label="@jsills92" onClick={handleGithubClick} />
       </div>
     </div>
   );

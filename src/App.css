@@ -1,6 +1,6 @@
 /* Basic styles for the calculator */
 .calculator {
-  max-width: 200px;
+  max-width: 350px;
   margin: 50px auto;
   padding: 10px;
   border: 2px solid #ccc;
@@ -20,7 +20,7 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
   gap: 10px;
 }
 
@@ -33,6 +33,24 @@
   border-radius: 5px;
 }
 
-.button:hover {
-  background-color: #ddd;
+.large {
+  grid-column: span 2; /* Make the button span two columns */
+}
+
+.button.clear {
+  background-color: #ff4d4d; /* Red background for clear */
+  color: white; /* White text */
+}
+
+.button.clear:hover {
+  background-color: #ff1a1a; /* Darker red when hovered */
+}
+
+.button.github {
+  background-color: #24292f; /* GitHub's dark background */
+  color: white; /* White text */
+}
+
+.button.github:hover {
+  background-color: #0366d6; /* GitHub blue color when hovered */
 }
