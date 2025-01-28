@@ -20,8 +20,8 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  gap: 1px; /* Add spacing between buttons */
 }
 
 .button {
@@ -31,26 +31,31 @@
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  text-align: center;
 }
 
-.large {
-  grid-column: span 2; /* Make the button span two columns */
+/* Make specific buttons span two columns */
+.button.clear,
+.button.github {
+  grid-column: span 2; /* These buttons take up 2 columns */
 }
 
+/* Clear button styles */
 .button.clear {
-  background-color: #ff4d4d; /* Red background for clear */
-  color: white; /* White text */
+  background-color: #ff4d4d;
+  color: white;
 }
 
 .button.clear:hover {
-  background-color: #ff1a1a; /* Darker red when hovered */
+  background-color: #ff1a1a;
 }
 
+/* GitHub button styles */
 .button.github {
-  background-color: #24292f; /* GitHub's dark background */
-  color: white; /* White text */
+  background-color: #24292f;
+  color: white;
 }
 
 .button.github:hover {
-  background-color: #0366d6; /* GitHub blue color when hovered */
+  background-color: #0366d6;
 }
