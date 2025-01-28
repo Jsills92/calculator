@@ -225,3 +225,5 @@ const Calculator = () => {
 };
 
 export default Calculator; // Ensure export is at the bottom
+
+
