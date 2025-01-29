@@ -1,37 +1,77 @@
+/* Webpage background */
+body {
+  background-color: #34495E; /* Deep, muted blue background */
+  font-family: 'Arial', sans-serif; /* Clean, modern font for the whole page */
+  color: white; /* White text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmt4d2VibXMweTFkY2JzdWpjODMyMmMxMzN1dnk3ejJtZ3hrNjQzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QpVUMRUJGokfqXyfa1/giphy.gif'); /* Binary animation gif */
+  background-size: cover; /* Make sure the background covers the whole viewport */
+  background-size: cover; /* Make sure the background covers the whole viewport */
+  background-position: center;
+}
+
 /* Basic styles for the calculator */
 .calculator {
   max-width: 350px;
   margin: 50px auto;
-  padding: 10px;
-  border: 2px solid #ccc;
+  padding: 15px;
+  border: 2px solid #444; /* Darker border for a sleek look */
   border-radius: 10px;
-  background-color: #f5f5f5;
+  background-color: #1A252F; /* Darker background for the calculator */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
 }
 
+/* Display styling */
 .display {
-  height: 50px;
+  height: 60px; /* Slightly larger display */
   margin-bottom: 20px;
   padding: 10px;
   text-align: right;
-  font-size: 1.5em;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  font-size: 1.8em;
+  background-color: #1A252F; /* Dark background for display */
+  color: #EAEAEA; /* Lighter text color */
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  white-space: nowrap;
 }
 
+/* Button grid layout */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
-  gap: 1px; /* Add spacing between buttons */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px; /* More space between buttons */
 }
 
+/* Button styles */
 .button {
   padding: 20px;
   font-size: 1.2em;
   cursor: pointer;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: #34495E; /* Default button color */
+  color: white;
+  border: 1px solid #444;
   border-radius: 5px;
   text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+/* Button hover and active states */
+.button:hover {
+  background-color: #5D6D7E;
+}
+
+.button:active {
+  background-color: #2C3E50;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Make specific buttons span two columns */
@@ -40,22 +80,45 @@
   grid-column: span 2; /* These buttons take up 2 columns */
 }
 
-/* Clear button styles */
+/* Clear button styling */
 .button.clear {
-  background-color: #ff4d4d;
+  background-color: #E74C3C; /* Red clear button */
   color: white;
 }
 
 .button.clear:hover {
-  background-color: #ff1a1a;
+  background-color: #C0392B;
 }
 
-/* GitHub button styles */
+/* GitHub button styling */
 .button.github {
-  background-color: #24292f;
+  background-color: #24292f; /* Dark GitHub button */
   color: white;
 }
 
 .button.github:hover {
   background-color: #0366d6;
+}
+
+/* Special button types (operators, etc.) */
+.button.operator {
+  background-color: #2980B9; /* Blue for operators */
+}
+
+.button.operator:hover {
+  background-color: #3498DB;
+}
+
+.button.number {
+  background-color: #5D6D7E; /* Neutral color for number buttons */
+}
+
+.button.number:hover {
+  background-color: #7F8C8D;
+}
+
+/* Adjusted button sizes */
+.button {
+  font-size: 1.4em; /* Larger text */
+  padding: 15px; /* Larger buttons */
 }
