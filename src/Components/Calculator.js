@@ -11,6 +11,7 @@ const Calculator = () => {
     if (!isNaN(label) || label === '.') {
       // Handle numbers and decimals
       if (label === '.' && displayValue.includes('.')) return; // Prevent multiple decimals
+      if (displayValue.length >= 25) return; // Prevent more than 22 digits
       setDisplayValue((prev) => (prev === '0' ? label : prev + label));
       setExpression((prev) => (prev === '0' ? label : prev + label));
     } else if (['+', '-', '*', '/'].includes(label)) {
